@@ -126,8 +126,8 @@ kubectl apply -f pod1.yaml
 # <img width="940" height="161" alt="image" src="https://github.com/user-attachments/assets/b2f95dd7-1ec6-45ad-88a8-4b52093c5560" />
 
  ----------------------------------------------------------------------------------------------------------------------------------------
- ```bash
- ```
+ `FOLLOW ABOVE STEPS `
+
  ## ⚠️ Scenario 2: Delete Secret
 
 Delete the Secret:
