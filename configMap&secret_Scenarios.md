@@ -1,4 +1,5 @@
-# Scenario 1
+# Scenario 1 : Delete ConfigMap
+### Create a yaml files and solve that issue
 ```text
   ls -lrth
   ls
