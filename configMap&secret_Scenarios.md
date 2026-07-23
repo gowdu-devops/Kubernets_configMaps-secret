@@ -1,10 +1,10 @@
-## Scenario 1
+# Scenario 1
 
-# Delete ConfigMap
+## Delete ConfigMap
 
 kubectl delete cm app-config -n config-secret-demo
 
-# Expected
+## Expected
 
 Existing Pods continue to run.
 New Pods that require the ConfigMap may fail to start if they reference missing keys.
