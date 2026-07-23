@@ -4,18 +4,22 @@
   ls
 ```
 ## <img width="293" height="27" alt="image" src="https://github.com/user-attachments/assets/95d97ae8-7aad-4229-9bf8-b8b1dba2bbc2" />
-```bash
+```text
+cat namespace.yaml
+```
 ## <img width="304" height="52" alt="image" src="https://github.com/user-attachments/assets/88bd619d-aeb8-4827-bd73-87950aab7726" />
+```text
+cat configmap.yaml
 ```
-```bash
 ## <img width="326" height="130" alt="image" src="https://github.com/user-attachments/assets/81136c0a-c56b-4de5-91a2-385bb378e54e" />
+```text
+cat secret.yaml
 ```
-```bash
 ## <img width="287" height="133" alt="image" src="https://github.com/user-attachments/assets/bca22d8c-dd8d-45c6-a6ba-10246972975e" />
+```text
+cat pod.yaml
 ```
-```bash
 ## <img width="185" height="457" alt="image" src="https://github.com/user-attachments/assets/3f14a8d2-c49a-4502-8564-a7d3b512977a" />
-```
 ```bash
 ## <img width="612" height="96" alt="image" src="https://github.com/user-attachments/assets/cf265a92-ff76-44c4-8757-c42075676d1e" />
 ```
@@ -41,14 +45,14 @@ New Pods that require the ConfigMap may fail to start if they reference missing 
 Run the following command:
 
 ```bash
-kubectl get pods -n config-secret-demo
+kubectl get pods -n demo
 ```
 
 Example Output:
 
 ```text
 NAME          STATUS                         READY
-nginx-pod-2   CreateContainerConfigError     0/1
+nginx-1       CreateContainerConfigError     0/1
 ```
 
 ---
@@ -58,7 +62,7 @@ nginx-pod-2   CreateContainerConfigError     0/1
 Run the following command:
 
 ```bash
-kubectl describe pod nginx-pod-2 -n config-secret-demo
+kubectl describe pod nginx-1 -n demo
 ```
 
 Go to the **Events** section at the bottom.
@@ -79,7 +83,7 @@ Warning  Failed     Error: configmap "app-config" not found
 Run the following command:
 
 ```bash
-kubectl get configmap -n config-secret-demo
+kubectl get configmap -n demo
 ```
 
 Example:
@@ -106,7 +110,7 @@ kubectl apply -f configmap.yaml
 Then delete the failed Pod:
 
 ```bash
-kubectl delete pod nginx-pod-2 -n config-secret-demo
+kubectl delete pod nginx-1 -n demo
 ```
 
 Create the Pod again:
@@ -125,7 +129,7 @@ kubectl apply -f configmap.yaml
 Then delete the failed Pod:
 
 ```bash
-kubectl delete pod nginx-pod-2 -n config-secret-demo
+kubectl delete pod nginx-1 -n demo
 ```
 
 Create it again:
