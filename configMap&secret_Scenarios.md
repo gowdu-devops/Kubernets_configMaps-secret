@@ -27,17 +27,17 @@ cat pod.yaml
 
 ## Delete ConfigMap
 
-```bash
+```text
 kubectl delete cm app-config -n demo
 ```
 ## <img width="779" height="311" alt="image" src="https://github.com/user-attachments/assets/8de72c26-085d-45e9-afda-3f537d7df240" />
 
 ## Expected
 
-Existing Pods continue to run.
-New Pods that require the ConfigMap may fail to start if they reference missing keys.
-```bash
-
+`Existing Pods continue to run.`
+`New Pods that require the ConfigMap may fail to start if they reference missing keys.`
+```text
+kubectl apply -f pod.yaml -n demo
 ```
 ## <img width="716" height="176" alt="image" src="https://github.com/user-attachments/assets/9ff0753d-4efb-4514-974c-2c1048826317" />
 
