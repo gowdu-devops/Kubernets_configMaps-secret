@@ -54,10 +54,7 @@ kubectl get pods -n demo
 
 Example Output:
 
-```text
-NAME          STATUS                         READY
-nginx-1       CreateContainerConfigError     0/1
-```
+# <img width="554" height="84" alt="image" src="https://github.com/user-attachments/assets/6ffdcc93-bc11-454e-8588-8fcee8eee7a0" />
 
 ---
 
@@ -77,6 +74,9 @@ Example:
 Events:
 Warning  Failed     Error: configmap "app-config" not found
 ```
+
+# <img width="792" height="676" alt="image" src="https://github.com/user-attachments/assets/e8778d87-be74-4bbc-bd8f-79e3bd57d6d2" />
+# <img width="817" height="647" alt="image" src="https://github.com/user-attachments/assets/58f450b0-2f80-4ff2-b908-aac28aa41d15" />
 
 > **📌 Note:** The **Events** section tells you the exact reason why the Pod failed.
 
@@ -103,25 +103,6 @@ If you don't see **app-config**, it has been deleted.
 
 ---
 
-## ⚠️ Step 4: Fix the Issue
-
-If the ConfigMap was deleted, recreate it:
-
-```bash
-kubectl apply -f configmap.yaml
-```
-
-Then delete the failed Pod:
-
-```bash
-kubectl delete pod nginx-1 -n demo
-```
-
-Create the Pod again:
-
-```bash
-kubectl apply -f pod2.yaml
-```
 > **📌 Step 4: Fix the Issue**
 
 If the ConfigMap was deleted, recreate it:
@@ -139,8 +120,9 @@ kubectl delete pod nginx-1 -n demo
 Create it again:
 
 ```bash
-kubectl apply -f pod2.yaml
+kubectl apply -f pod1.yaml
 ```
+# <img width="940" height="161" alt="image" src="https://github.com/user-attachments/assets/b2f95dd7-1ec6-45ad-88a8-4b52093c5560" />
 
  
 
