@@ -37,15 +37,15 @@ Step 3: Check Whether the ConfigMap Exists
 kubectl get configmap -n config-secret-demo
 If you don't see app-config, it has been deleted.
 ________________________________________
-Step 4: Fix the Issue
+📌 Note Step 4: Fix the Issue
 ```bash
 
-### If the ConfigMap was deleted, recreate it:
-`kubectl apply -f configmap.yaml`
-### Then delete the failed Pod:
-`kubectl delete pod nginx-pod-2 -n config-secret-demo`
-### Create it again:
-`kubectl apply -f pod2.yaml`
+If the ConfigMap was deleted, recreate it:
+kubectl apply -f configmap.yaml
+Then delete the failed Pod:
+kubectl delete pod nginx-pod-2 -n config-secret-demo
+Create it again:
+kubectl apply -f pod2.yaml
 
 ```
 
