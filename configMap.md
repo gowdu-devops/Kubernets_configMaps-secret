@@ -15,45 +15,6 @@ A **ConfigMap** is used to store **non-sensitive configuration data** in Kuberne
 
 ---
 
-# Why ConfigMap?
-
-## Without ConfigMap
-```yaml
-env:
-- name: DB_HOST
-  value: mysql.default.svc.cluster.local
-
-
-## ConfigMap YAML
-
-```yaml
-apiVersion: v1
-kind: ConfigMap
-
-metadata:
-  name: app-config
-  namespace: demo
-
-data:
-  APP_NAME: nginx
-  APP_ENV: dev
-  DB_HOST: mysql
-  DB_PORT: "3306"
-```
-
-Apply
-
-```bash
-kubectl apply -f configmap.yaml
-```
-
-Verify
-
-```bash
-kubectl get configmap -n demo
-kubectl describe configmap app-config -n demo
-```
-
 ---
 
 ## Use ConfigMap in Pod
