@@ -125,5 +125,127 @@ kubectl apply -f pod1.yaml
 ```
 # <img width="940" height="161" alt="image" src="https://github.com/user-attachments/assets/b2f95dd7-1ec6-45ad-88a8-4b52093c5560" />
 
- 
+ ----------------------------------------------------------------------------------------------------------------------------------------
+ ```bash
+ ```
+ ## ⚠️ Scenario 2: Delete Secret
+
+Delete the Secret:
+
+```bash
+kubectl delete secret db-secret -n config-secret-demo
+```
+
+### Expected Result
+
+- Existing Pods continue running.
+- New Pods that depend on the Secret will fail to start.
+
+Expected Pod Status:
+
+```text
+CreateContainerConfigError
+```
+
+---
+
+## ⚠️ Scenario 3: Wrong ConfigMap Name
+
+Use an incorrect ConfigMap name in the Pod YAML:
+
+```yaml
+configMapKeyRef:
+  name: wrong-config
+  key: APP_ENV
+```
+
+### Expected Result
+
+The Pod will fail to start.
+
+Expected Pod Status:
+
+```text
+CreateContainerConfigError
+```
+
+### Verify the Issue
+
+```bash
+kubectl describe pod env-demo -n config-secret-demo
+```
+
+Example Error:
+
+```text
+Error: configmap "wrong-config" not found
+```
+
+---
+
+## ⚠️ Scenario 4: Wrong Secret Name
+
+Use an incorrect Secret name in the Pod YAML:
+
+```yaml
+secretKeyRef:
+  name: wrong-secret
+  key: password
+```
+
+### Expected Result
+
+The Pod will fail to start.
+
+Expected Pod Status:
+
+```text
+CreateContainerConfigError
+```
+
+### Verify the Issue
+
+```bash
+kubectl describe pod env-demo -n config-secret-demo
+```
+
+Example Error:
+
+```text
+Error: secret "wrong-secret" not found
+```
+
+---
+
+## ⚠️ Scenario 5: Wrong Secret Key
+
+Use an incorrect key in the Secret reference:
+
+```yaml
+secretKeyRef:
+  name: db-secret
+  key: wrongkey
+```
+
+### Expected Result
+
+The Pod will fail to start.
+
+Expected Pod Status:
+
+```text
+CreateContainerConfigError
+```
+
+### Verify the Issue
+
+```bash
+kubectl describe pod env-demo -n config-secret-demo
+```
+
+Example Error:
+
+```text
+Error: couldn't find key "wrongkey" in Secret "db-secret"
+```
 
