@@ -1,5 +1,5 @@
 # Scenario 1
-```bash
+```text
   ls -lrth
   ls
 ```
