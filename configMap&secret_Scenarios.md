@@ -21,8 +21,10 @@ New Pods that require the ConfigMap may fail to start if they reference missing 
 Step 1: Check the Pod Status
 kubectl get pods -n demo
 Example:
- ________________________________________
+________________________________________
+```text
 Step 2: Describe the Pod (Most Important)
+```
 kubectl describe pod nginx-pod-2 -n config-secret-demo
 Go to the Events section at the bottom.
 Example:
