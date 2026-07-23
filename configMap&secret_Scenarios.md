@@ -1,6 +1,7 @@
 # Scenario 1
 ```bash
-  
+  ls -lrth
+  ls
 ```
 ## <img width="293" height="27" alt="image" src="https://github.com/user-attachments/assets/95d97ae8-7aad-4229-9bf8-b8b1dba2bbc2" />
 ```bash
