@@ -1,7 +1,8 @@
 # Scenario 1
 ```bash
-## <img width="293" height="27" alt="image" src="https://github.com/user-attachments/assets/95d97ae8-7aad-4229-9bf8-b8b1dba2bbc2" />
+  
 ```
+## <img width="293" height="27" alt="image" src="https://github.com/user-attachments/assets/95d97ae8-7aad-4229-9bf8-b8b1dba2bbc2" />
 ```bash
 ## <img width="304" height="52" alt="image" src="https://github.com/user-attachments/assets/88bd619d-aeb8-4827-bd73-87950aab7726" />
 ```
