@@ -15,6 +15,15 @@ A **ConfigMap** is used to store **non-sensitive configuration data** in Kuberne
 
 ---
 
+# Why ConfigMap?
+
+## Without ConfigMap
+```yaml
+env:
+- name: DB_HOST
+  value: mysql.default.svc.cluster.local
+
+
 ## ConfigMap YAML
 
 ```yaml
