@@ -21,23 +21,26 @@ cat pod.yaml
 ```
 ## <img width="185" height="457" alt="image" src="https://github.com/user-attachments/assets/3f14a8d2-c49a-4502-8564-a7d3b512977a" />
 ```bash
-## <img width="612" height="96" alt="image" src="https://github.com/user-attachments/assets/cf265a92-ff76-44c4-8757-c42075676d1e" />
+
 ```
+## <img width="612" height="96" alt="image" src="https://github.com/user-attachments/assets/cf265a92-ff76-44c4-8757-c42075676d1e" />
 
 ## Delete ConfigMap
 
-kubectl delete cm app-config -n demo
 ```bash
-## <img width="779" height="311" alt="image" src="https://github.com/user-attachments/assets/8de72c26-085d-45e9-afda-3f537d7df240" />
+kubectl delete cm app-config -n demo
 ```
+## <img width="779" height="311" alt="image" src="https://github.com/user-attachments/assets/8de72c26-085d-45e9-afda-3f537d7df240" />
 
 ## Expected
 
 Existing Pods continue to run.
 New Pods that require the ConfigMap may fail to start if they reference missing keys.
 ```bash
-## <img width="716" height="176" alt="image" src="https://github.com/user-attachments/assets/9ff0753d-4efb-4514-974c-2c1048826317" />
+
 ```
+## <img width="716" height="176" alt="image" src="https://github.com/user-attachments/assets/9ff0753d-4efb-4514-974c-2c1048826317" />
+
 
 # Troubleshooting Flow
 ## 🔍 Step 1: Check the Pod Status
